@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --color-1: #181818;
+    --color-2: #212121;
+    --color-3: #1c90d8;
+    --color-4: #b2214e;
+    --color-5: #768b9e;
+    --color-6: #d4d4d4;
+    --color-7: #fed700;
+    --color-8: #d9d9d9;
+    --color-9: #52585e;
+    --color-10: #CDCDCD;
+}
+
+body {
+    font-family: system-ui, 'Open Sans';
+    height: 100vh;
+    background-color: var(--color-1);
+}
+
+.container {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+button,
+select,
+input {
+    border: none;
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }

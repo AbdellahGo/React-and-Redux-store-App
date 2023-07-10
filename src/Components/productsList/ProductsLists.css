@@ -1,0 +1,203 @@
+.products-container {
+    background-color: var(--color-1);
+}
+
+.products {
+    padding: 20px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid var(--color-6);
+    border-bottom: 1px solid var(--color-6);
+}
+
+.products-container .products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+
+.products-container .products-list .product-item {
+    position: relative;
+    padding: 20px;
+}
+
+.products-container .products-list .product-item::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    top: 50%;
+    left: 0;
+    background-color: var(--color-9);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.products-container .products-list .product-item::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    top: 50%;
+    right: 0;
+    background-color: var(--color-9);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.products-container .products-list .product-item:hover {
+    background-color: var(--color-2);
+}
+
+
+.products-container .product-item p:first-of-type {
+    font-size: 16px;
+    color: var(--color-8);
+}
+
+.products-container .product-item h3 {
+    height: 70px;
+    overflow: hidden;
+    font-size: 25px;
+    margin-top: 5px;
+    color: var(--color-6);
+}
+
+.products-container .product-item img {
+    height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+@media (max-width: 575.98px) {
+    .products-container .product-item img {
+        height: 500px;
+    }
+}
+
+.products-container .product-item p.before {
+    font-size: 16px;
+    margin-top: 15px;
+    color: var(--color-8);
+    text-decoration: line-through;
+}
+
+.products-container .product-item div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.products-container .product-item div i {
+    color: aliceblue;
+    font-size: 20px;
+    color: var(--color-8);
+    background-color: var(--color-9);
+    padding: 8px;
+    transition: transform 0.3s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+}
+
+.products-container .product-item:hover div i {
+    background-color: var(--color-7);
+    color: var(--color-1);
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+}
+
+.products-container .product-item div p.after {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-4);
+}
+
+.products-container .product-item div p.alone {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-3);
+    margin-top: 40px;
+}
+
+.products-container .products-list .product-item img {
+    width: 100%;
+}
+
+
+
+.no-product {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--color-9);
+    text-align: center;
+}
+
+
+.pending {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--color-7);
+    border-left: 10px solid var(--color-7);
+    border-top: 10px solid var(--color-7);
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+@keyframes rotate {
+
+    0%,
+    10% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    10%,
+    50% {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+
+    50%,
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
